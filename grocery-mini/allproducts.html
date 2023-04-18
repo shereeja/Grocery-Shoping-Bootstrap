@@ -1,0 +1,1725 @@
+<!--Product Page Design-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vegetables Page</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+
+    <!-- Bootstrap 5 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome 5 CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+
+<body class="product">
+ <style>
+
+    h6{
+      top: 120px;
+    left: 84%;
+    position: fixed;
+    font-size: 5rem;
+    font-size: 6rem;
+    cursor: pointer;
+    z-index: 10;
+    color: #2429bb;
+    background-color: #d5d0ca8c;
+    width: 96px;
+    border-radius: 44px;
+    padding-left:11px;
+
+}
+  h6:before{
+    content: attr(data-count);
+      color: white;
+      position:absolute;z-index: 20;
+      right: 16px;
+      font-size: 15px;
+      text-align: center;
+      top: -12px;
+      width: 20px;
+      height: 20px;
+      background: red;
+      border-radius: 50%;
+      opacity: 0;
+  }
+  h6.zero:before{
+    opacity: 1;
+  }
+ a{
+    cursor: pointer;
+  }
+ 
+
+  
+
+</style>
+
+
+    <header id="full_nav">
+        <div class="header">
+            <div class="container">
+              
+                <nav class="navbar navbar-expand-lg">
+                    <a class="navbar-brand" href="index.html">
+                          <a class="logo"> <i class="fas fa-shopping-basket"></i>Fresh<span style="color: yellow; font-family: cursive;">mart</span></a>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav"
+                        aria-controls="main-nav" aria-expanded="true" aria-label="Toggle navigation">
+                        <!-- <span class="navbar-toggler-icon"></span> -->
+                        <i class="fas fa-stream navbar-toggler-icon"></i>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="main-nav">
+                        <ul class="navbar-nav mx-auto">
+                             <li class="nav-item">
+                                <a class="nav-link" href="home.html">Home</a>
+                            </li>
+                             <li class="nav-item">
+                                <a class="nav-link" href="allproducts.html">Products</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="about.html">About us</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="condact.html">Contact</a>
+                            </li>
+                             <li class="nav-item">
+                                <a class="nav-link" href="login.html">Account</a>
+                            </li>
+
+                          
+                        </ul>
+                       
+                    </div>
+                </nav>
+            </div>
+            
+            <h6>  <i class="fa fa-shopping-cart"></i> </h6>
+         
+     
+      </div>
+      
+     
+    </header>
+    
+    <!-- Navbar Section end -->
+
+    <!-- banner Section start -->
+    <section class="banner_section">
+        <div class="container">
+            <div class="banner-content">
+                <h1>all items</h1>
+            </div>
+        </div>
+    </section>
+    <!-- banner section exit -->
+    <style type="text/css">
+        @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600&display=swap');
+
+*{
+   font-family: 'Nunito', sans-serif;
+   margin:0; padding:0;
+   box-sizing: border-box;
+   outline: none; border:none;
+   text-decoration: none;
+   transition: all .2s linear;
+   text-transform: capitalize;
+}
+
+html{
+   font-size: 62.5%;
+   overflow-x: hidden;
+}
+
+body{
+   background: #eee;
+}
+
+.container{
+   max-width: 1200px;
+   margin:0 auto;
+   padding:3rem 2rem;
+}
+
+.container .title{
+   font-size: 3.5rem;
+   color:#444;
+   margin-bottom: 3rem;
+   text-transform: uppercase;
+   text-align: center;
+}
+
+.container .products-container{
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+   gap:2rem;
+}
+
+.container .products-container .product{
+   text-align: center;
+   padding:3rem 2rem;
+   background: #fff;
+   box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+   outline: .1rem solid #ccc;
+   outline-offset: -1.5rem;
+   cursor: pointer;
+}
+
+.container .products-container .product:hover{
+   outline: .2rem solid #222;
+   outline-offset: 0;
+}
+
+.container .products-container .product img{
+   height: 25rem;
+}
+
+.container .products-container .product:hover img{
+   transform: scale(.9);
+}
+
+.container .products-container .product h3{
+   padding:.5rem 0;
+   font-size: 2rem;
+   color:#444;
+}
+
+.container .products-container .product:hover h3{
+   color:#27ae60;
+}
+
+.container .products-container .product .price{
+   font-size: 2rem;
+   color:#444;
+}
+
+.products-preview{
+   position: fixed;
+   top:0; left:0;
+   min-height: 100vh;
+   width: 100%;
+   background: rgba(0,0,0,.8);
+   display: none;
+   align-items: center;
+   justify-content: center;
+   z-index: 1000;
+}
+ a{
+    color: #1a7c26d1;
+  }
+
+.products-preview .preview{
+   display: none;
+   padding:2rem;
+   text-align: center;
+   background: #fff;
+   position: relative;
+   margin:2rem;
+   width: 40rem;
+}
+
+.products-preview .preview.active{
+   display: inline-block;
+}
+
+.products-preview .preview img{
+   height: 30rem;
+}
+
+.products-preview .preview .fa-times{
+   position: absolute;
+   top:1rem; right:1.5rem;
+   cursor: pointer;
+   color:#444;
+   font-size: 4rem;
+}
+
+.products-preview .preview .fa-times:hover{
+   transform: rotate(90deg);
+}
+
+.products-preview .preview h3{
+   color:#444;
+   padding:.5rem 0;
+   font-size: 2.5rem;
+}
+
+.products-preview .preview .stars{
+   padding:1rem 0;
+   font-size: 1.7rem;
+}
+
+.products-preview .preview .stars i{
+   color:#27ae60;
+}
+
+.products-preview .preview .stars span{
+   color:#999;
+}
+
+.products-preview .preview p{
+   line-height: 1.5;
+   padding:1rem 0;
+   font-size: 1.6rem;
+   color:#777;
+}
+
+.products-preview .preview .price{
+   padding:1rem 0;
+   font-size: 2.5rem;
+   color:#27ae60;
+}
+
+.products-preview .preview .buttons{
+   display: flex;
+   gap:1.5rem;
+   flex-wrap: wrap;
+   margin-top: 1rem;
+}
+
+.products-preview .preview .buttons a{
+   flex:1 1 16rem;
+   padding:1rem;
+   font-size: 1.8rem;
+   color:#444;
+   border:.1rem solid #444;
+}
+
+.products-preview .preview .buttons a.cart{
+   background: #444;
+   color:#fff;
+}
+
+.products-preview .preview .buttons a.cart:hover{
+   background: #111;
+}
+
+.products-preview .preview .buttons a.buy:hover{
+   background: #444;
+   color:#fff;
+}
+
+
+@media (max-width:991px){
+
+   html{
+      font-size: 55%;
+   }
+
+}
+
+@media (max-width:768px){
+
+   .products-preview .preview img{
+      height: 25rem;
+   }
+
+}
+
+@media (max-width:450px){
+
+   html{
+      font-size: 50%;
+   }
+
+}
+    </style>
+
+       <h3 class="bg-transparent text-center pt-5"><a href="#vegetables"> veggies| </a><a href="#fruits"> fruits | </a><a href="#egg&milk"> eggs & milk | </a><a href="#meat"> meat-items| </a>
+       </h3><br><br>
+
+<section id="vegetables">
+    <div class="container">
+
+   <h3 class="title"> veggies </h3>
+
+   <div class="products-container">
+
+      <div class="product" data-name="p-1">
+         <img src="images/product-9.png" alt="">
+         <h3>carrot</h3>
+         <div class="price">Rs.50/-</div>
+      </div>
+
+      <div class="product" data-name="p-2">
+         <img src="images/2.png" alt="">
+         <h3>onions</h3>
+         <div class="price">Rs.100.00/-</div>
+      </div>
+
+      <div class="product" data-name="p-3">
+         <img src="images/3.png" alt="">
+         <h3>tomatoes</h3>
+         <div class="price">Rs.80.00/-</div>
+      </div>
+
+      <div class="product" data-name="p-4">
+         <img src="images/4.png" alt="">
+         <h3>brinjal</h3>
+         <div class="price">Rs.80.00/-</div>
+      </div>
+
+      <div class="product" data-name="p-5">
+         <img src="images/5.png" alt="">
+         <h3>broccoli</h3>
+         <div class="price">Rs.80.00/-</div>
+      </div>
+
+      <div class="product" data-name="p-6">
+         <img src="images/6.png" alt="">
+         <h3>potatoes</h3>
+         <div class="price">Rs.80.00/-</div>
+      </div>
+<div class="product" data-name="p-7">
+         <img src="images/veg1.jpg" alt="">
+         <h3>capsicum</h3>
+         <div class="price">Rs.80.00/-</div>
+      </div>
+<div class="product" data-name="p-8">
+         <img src="images/veg2.jpg" alt="">
+         <h3>ladies finger</h3>
+         <div class="price">Rs.80.00/-</div>
+      </div>
+<div class="product" data-name="p-9">
+         <img src="images/veg3.jpg" alt="">
+         <h3>cauliflower</h3>
+         <div class="price">Rs.80.00/-</div>
+      </div>
+<div class="product" data-name="p-10">
+         <img src="images/veg4.jpg" alt="">
+         <h3>pumkin</h3>
+         <div class="price">Rs.80.00/-</div>
+      </div>
+<div class="product" data-name="p-11">
+         <img src="images/veg5.jpg" alt="">
+         <h3>chilly</h3>
+         <div class="price">Rs.80.00/-</div>
+      </div>
+<div class="product" data-name="p-12">
+         <img src="images/veg6.jpg" alt="">
+         <h3>cucumber</h3>
+         <div class="price">Rs.80.00/-</div>
+      </div>
+<div class="product" data-name="p-13">
+         <img src="images/veg7.jpg" alt="">
+         <h3>garlic</h3>
+         <div class="price">Rs.80.00/-</div>
+      </div>
+<div class="product" data-name="p-14">
+         <img src="images/veg8.jpg" alt="">
+         <h3>peas</h3>
+         <div class="price">Rs.80.00/-</div>
+      </div>
+<div class="product" data-name="p-15">
+         <img src="images/veg9.jpg" alt="">
+         <h3>raddish</h3>
+         <div class="price">Rs.80.00/-</div>
+      </div>
+
+      </div>
+
+   </div>
+
+
+</section>
+
+<section id="fruits">
+    <div class="container">
+
+   <h3 class="title"> fresh fruits </h3>
+
+   <div class="products-container">
+
+      <div class="product" data-name="p-16">
+         <img src="images/fruits/f1.png" alt="">
+         <h3>stawberry</h3>
+         <div class="price">Rs.50/-</div>
+      </div>
+
+      <div class="product" data-name="p-17">
+         <img src="images/fruits/f10.jpg" alt="">
+         <h3>avacado</h3>
+         <div class="price">Rs.100.00/-</div>
+      </div>
+
+      <div class="product" data-name="p-18">
+         <img src="images/fruits/f11.jpg" alt="">
+         <h3>cherry</h3>
+         <div class="price">Rs.80.00/-</div>
+      </div>
+
+      <div class="product" data-name="p-19">
+         <img src="images/fruits/f12.jpg" alt="">
+         <h3>grapes</h3>
+         <div class="price">Rs.80.00/-</div>
+      </div>
+
+      <div class="product" data-name="p-20">
+         <img src="images/fruits/f13.jpg" alt="">
+         <h3>pomogranate</h3>
+         <div class="price">Rs.80.00/-</div>
+      </div>
+
+      <div class="product" data-name="p-21">
+         <img src="images/fruits/f14.jpg" alt="">
+         <h3>mulberry</h3>
+         <div class="price">Rs.80.00/-</div>
+      </div>
+<div class="product" data-name="p-22">
+         <img src="images/fruits/f15.jpg" alt="">
+         <h3>custard apple</h3>
+         <div class="price">Rs.80.00/-</div>
+      </div>
+<div class="product" data-name="p-23">
+         <img src="images/fruits/f2.jpg" alt="">
+         <h3>musk mealon</h3>
+         <div class="price">Rs.80.00/-</div>
+      </div>
+<div class="product" data-name="p-24">
+         <img src="images/fruits/f3.png" alt="">
+         <h3>banana</h3>
+         <div class="price">Rs.80.00/-</div>
+      </div>
+<div class="product" data-name="p-25">
+         <img src="images/fruits/f4.jpg" alt="">
+         <h3>orange</h3>
+         <div class="price">Rs.80.00/-</div>
+      </div>
+<div class="product" data-name="p-26">
+         <img src="images/fruits/f5.jpg" alt="">
+         <h3>apple</h3>
+         <div class="price">Rs.80.00/-</div>
+      </div>
+<div class="product" data-name="p-27">
+         <img src="images/fruits/f6.jpg" alt="">
+         <h3>dragon fruit</h3>
+         <div class="price">Rs.80.00/-</div>
+      </div>
+<div class="product" data-name="p-28">
+         <img src="images/fruits/f7.png" alt="">
+         <h3>black grapes</h3>
+         <div class="price">Rs.80.00/-</div>
+      </div>
+<div class="product" data-name="p-29">
+         <img src="images/fruits/f8.jpg" alt="">
+         <h3>water melon</h3>
+         <div class="price">Rs.80.00/-</div>
+      </div>
+<div class="product" data-name="p-30">
+         <img src="images/fruits/f9.jpg" alt="">
+         <h3>pineapple</h3>
+         <div class="price">Rs.80.00/-</div>
+      </div>
+
+      </div>
+
+   </div>
+</section>
+
+
+<section id="egg&milk">
+    <div class="container">
+
+   <h3 class="title">eggs & milk </h3>
+
+   <div class="products-container">
+
+      <div class="product" data-name="p-31">
+         <img src="images/milk/e1.jpg" alt="">
+         <h3>eggs1</h3>
+         <div class="price">Rs.50/-</div>
+      </div>
+
+      <div class="product" data-name="p-32">
+         <img src="images/milk/e2.jpg" alt="">
+         <h3>egg2</h3>
+         <div class="price">Rs.100.00/-</div>
+      </div>
+
+      <div class="product" data-name="p-33">
+         <img src="images/milk/e3.jpg" alt="">
+         <h3>egg3</h3>
+         <div class="price">Rs.80.00/-</div>
+      </div>
+
+      <div class="product" data-name="p-34">
+         <img src="images/milk/e4.jpg" alt="">
+         <h3>egg4</h3>
+         <div class="price">Rs.80.00/-</div>
+      </div>
+
+      <div class="product" data-name="p-35">
+         <img src="images/milk/e5.jpg" alt="">
+         <h3>egg5</h3>
+         <div class="price">Rs.80.00/-</div>
+      </div>
+
+      <div class="product" data-name="p-36">
+         <img src="images/milk/e6.jpg" alt="">
+         <h3>egg6</h3>
+         <div class="price">Rs.80.00/-</div>
+      </div>
+
+      <div class="product" data-name="p-37">
+         <img src="images/milk/m1.jpg" alt="">
+         <h3>milk1</h3>
+         <div class="price">Rs.50/-</div>
+      </div>
+
+      <div class="product" data-name="p-38">
+         <img src="images/milk/m2.jpg" alt="">
+         <h3>milk2</h3>
+         <div class="price">Rs.100.00/-</div>
+      </div>
+
+      <div class="product" data-name="p-39">
+         <img src="images/milk/m3.jpg" alt="">
+         <h3>milk3</h3>
+         <div class="price">Rs.80.00/-</div>
+      </div>
+
+      <div class="product" data-name="p-40">
+         <img src="images/milk/m4.jpg" alt="">
+         <h3>milk4</h3>
+         <div class="price">Rs.80.00/-</div>
+      </div>
+
+      <div class="product" data-name="p-41">
+         <img src="images/milk/m5.jpg" alt="">
+         <h3>milk5</h3>
+         <div class="price">Rs.80.00/-</div>
+      </div>
+
+      <div class="product" data-name="p-42">
+         <img src="images/milk/m6.jpg" alt="">
+         <h3>milk6</h3>
+         <div class="price">Rs.80.00/-</div>
+      </div>
+
+
+   </div>
+</section>
+
+<section id="meat">
+    <div class="container">
+
+   <h3 class="title"> fresh meat </h3>
+
+   <div class="products-container">
+
+      <div class="product" data-name="p-43">
+         <img src="images/meat/m1.jpg" alt="">
+         <h3>chick1</h3>
+         <div class="price">Rs.50/-</div>
+      </div>
+
+      <div class="product" data-name="p-44">
+         <img src="images/meat/m2.jpg" alt="">
+         <h3>chick2</h3>
+         <div class="price">Rs.100.00/-</div>
+      </div>
+
+      <div class="product" data-name="p-45">
+         <img src="images/meat/m3.jpg" alt="">
+         <h3>chick3</h3>
+         <div class="price">Rs.80.00/-</div>
+      </div>
+
+      <div class="product" data-name="p-46">
+         <img src="images/meat/m4.jpg" alt="">
+         <h3>chick4</h3>
+         <div class="price">Rs.80.00/-</div>
+      </div>
+
+      <div class="product" data-name="p-47">
+         <img src="images/meat/m5.jpg" alt="">
+         <h3>chick5</h3>
+         <div class="price">Rs.80.00/-</div>
+      </div>
+
+      <div class="product" data-name="p-48">
+         <img src="images/meat/m6.jpg" alt="">
+         <h3>chick6</h3>
+         <div class="price">Rs.80.00/-</div>
+      </div>
+<div class="product" data-name="p-49">
+         <img src="images/meat/m7.jpg" alt="">
+         <h3>chick7</h3>
+         <div class="price">Rs.80.00/-</div>
+      </div>
+<div class="product" data-name="p-50">
+         <img src="images/meat/m8.jpg" alt="">
+         <h3>chick8</h3>
+         <div class="price">Rs.80.00/-</div>
+      </div>
+
+      </div>
+
+   </div>
+</section>
+
+
+<!--prview-->
+<section>
+<div class="products-preview">
+
+   <div class="preview" data-target="p-1">
+      <i class="fas fa-times"></i>
+      <img src="images/product-9.png" alt="">
+      <h3>organic carrot</h3>
+      <div class="stars">
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star-half-alt"></i>
+         <span>( 50 )</span>
+      </div>
+      
+      <div class="price">Rs.50/-</div>
+      <div class="buttons">
+        
+         <a  class="cart">add to cart</a>
+      </div>
+   </div>
+
+   <div class="preview" data-target="p-2">
+      <i class="fas fa-times"></i>
+      <img src="images/2.png" alt="">
+      <h3>organic onions</h3>
+      <div class="stars">
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star-half-alt"></i>
+         <span>( 100 )</span>
+      </div>
+      <div class="price">Rs.100/-</div>
+      <div class="buttons">
+
+         <a class="cart">add to cart</a>
+      </div>
+   </div>
+
+   <div class="preview" data-target="p-3">
+      <i class="fas fa-times"></i>
+      <img src="images/3.png" alt="">
+      <h3> tomatoes</h3>
+      <div class="stars">
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star-half-alt"></i>
+         <span>( 100 )</span>
+      </div>
+      <div class="price">Rs.80/-</div>
+      <div class="buttons">
+     
+         <a  class="cart">add to cart</a>
+      </div>
+   </div>
+
+   <div class="preview" data-target="p-4">
+      <i class="fas fa-times"></i>
+      <img src="images/4.png" alt="">
+      <h3> brinjal</h3>
+      <div class="stars">
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star-half-alt"></i>
+         <span>( 50 )</span>
+      </div>
+      <div class="price">Rs.80/-</div>
+      <div class="buttons">
+ 
+         <a class="cart">add to cart</a>
+      </div>
+   </div>
+
+   <div class="preview" data-target="p-5">
+      <i class="fas fa-times"></i>
+      <img src="images/5.png" alt="">
+      <h3> broccoli</h3>
+      <div class="stars">
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star-half-alt"></i>
+         <span>( 250 )</span>
+      </div>
+      <div class="price">Rs.80/-</div>
+      <div class="buttons">
+        
+         <a  class="cart">add to cart</a>
+      </div>
+   </div>
+
+   <div class="preview" data-target="p-6">
+      <i class="fas fa-times"></i>
+      <img src="images/6.png" alt="">
+      <h3> potatoes</h3>
+      <div class="stars">
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star-half-alt"></i>
+         <span>( 250 )</span>
+      </div>
+      <div class="price">Rs.80/-</div>
+      <div class="buttons">
+    
+         <a class="cart">add to cart</a>
+      </div>
+   </div>
+
+    <div class="preview" data-target="p-7">
+      <i class="fas fa-times"></i>
+      <img src="images/veg1.jpg" alt="">
+      <h3>capsicum</h3>
+      <div class="stars">
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star-half-alt"></i>
+         <span>( 250 )</span>
+      </div>
+      <div class="price">Rs.80/-</div>
+      <div class="buttons">
+        
+         <a  class="cart">add to cart</a>
+      </div>
+   </div> 
+   <div class="preview" data-target="p-8">
+      <i class="fas fa-times"></i>
+      <img src="images/veg2.jpg" alt="">
+      <h3>ladies finger</h3>
+      <div class="stars">
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star-half-alt"></i>
+         <span>( 250 )</span>
+      </div>
+      <div class="price">Rs.80/-</div>
+      <div class="buttons">
+        
+         <a class="cart">add to cart</a>
+      </div>
+   </div> 
+   <div class="preview" data-target="p-9">
+      <i class="fas fa-times"></i>
+      <img src="images/veg3.jpg" 3alt="">
+      <h3>cauliflower</h3>
+      <div class="stars">
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star-half-alt"></i>
+         <span>( 250 )</span>
+      </div>
+      <div class="price">Rs.80/-</div>
+      <div class="buttons">
+       
+         <a class="cart">add to cart</a>
+      </div>
+   </div> 
+   <div class="preview" data-target="p-10">
+      <i class="fas fa-times"></i>
+      <img src="images/veg4.jpg" alt="">
+      <h3>pumpkin</h3>
+      <div class="stars">
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star-half-alt"></i>
+         <span>( 250 )</span>
+      </div>
+      <div class="price">Rs.80/-</div>
+      <div class="buttons">
+       
+         <a class="cart">add to cart</a>
+      </div>
+   </div>
+
+    <div class="preview" data-target="p-11">
+      <i class="fas fa-times"></i>
+      <img src="images/veg5.jpg" alt="">
+      <h3>chilly</h3>
+      <div class="stars">
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star-half-alt"></i>
+         <span>( 250 )</span>
+      </div>
+      <div class="price">Rs.80/-</div>
+      <div class="buttons">
+         <a class="cart">add to cart</a>
+      </div>
+    </div>
+      <div class="preview" data-target="p-12">
+      <i class="fas fa-times"></i>
+      <img src="images/veg6.jpg" alt="">
+      <h3>cucumber</h3>
+      <div class="stars">
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star-half-alt"></i>
+         <span>( 250 )</span>
+      </div>
+      <div class="price">Rs.80/-</div>
+      <div class="buttons">
+         
+         <a class="cart">add to cart</a>
+      </div>
+    </div>
+
+    <div class="preview" data-target="p-13">
+      <i class="fas fa-times"></i>
+      <img src="images/veg6.jpg" alt="">
+      <h3>garlic</h3>
+      <div class="stars">
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star-half-alt"></i>
+         <span>( 250 )</span>
+      </div>
+      <div class="price">Rs.80/-</div>
+      <div class="buttons">
+        
+         <a  class="cart">add to cart</a>
+      </div>
+    </div>
+    <div class="preview" data-target="p-14">
+      <i class="fas fa-times"></i>
+      <img src="images/veg8.jpg" alt="">
+      <h3>peas</h3>
+      <div class="stars">
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star-half-alt"></i>
+         <span>( 250 )</span>
+      </div>
+      <div class="price">Rs.80/-</div>
+      <div class="buttons">
+         <a  class="cart">add to cart</a>
+      </div>
+    </div>
+      <div class="preview" data-target="p-15">
+      <i class="fas fa-times"></i>
+      <img src="images/veg9.jpg" alt="">
+      <h3>raddish</h3>
+      <div class="stars">
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star-half-alt"></i>
+         <span>( 250 )</span>
+      </div>
+      <div class="price">Rs.80/-</div>
+      <div class="buttons">
+      
+         <a  class="cart">add to cart</a>
+      </div>
+    </div>
+    <!--fruits-->
+    <div class="preview" data-target="p-16">
+      <i class="fas fa-times"></i>
+      <img src="images/fruits/f1.png" alt="">
+      <h3>stawberry</h3>
+      <div class="stars">
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star-half-alt"></i>
+         <span>( 50 )</span>
+      </div>
+      
+      <div class="price">Rs.50/-</div>
+      <div class="buttons">
+         
+         <a  class="cart">add to cart</a>
+      </div>
+   </div>
+
+   <div class="preview" data-target="p-17">
+      <i class="fas fa-times"></i>
+      <img src="images/fruits/f10.jpg" alt="">
+      <h3>avacado</h3>
+      <div class="stars">
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star-half-alt"></i>
+         <span>( 100 )</span>
+      </div>
+      <div class="price">Rs.100/-</div>
+      <div class="buttons">
+        
+         <a  class="cart">add to cart</a>
+      </div>
+   </div>
+
+     <div class="preview" data-target="p-18">
+      <i class="fas fa-times"></i>
+      <img src="images/fruits/f11.jpg" alt="">
+      <h3>cherry</h3>
+      <div class="stars">
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star-half-alt"></i>
+         <span>( 100 )</span>
+      </div>
+      <div class="price">Rs.100/-</div>
+      <div class="buttons">
+         <a class="cart">add to cart</a>
+      </div>
+   </div>
+
+   <div class="preview" data-target="p-19">
+      <i class="fas fa-times"></i>
+      <img src="images/fruits/f12.jpg" alt="">
+      <h3>grapes</h3>
+      <div class="stars">
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star-half-alt"></i>
+         <span>( 100 )</span>
+      </div>
+      <div class="price">Rs.80/-</div>
+      <div class="buttons">
+        
+         <a  class="cart">add to cart</a>
+      </div>
+   </div>
+
+   <div class="preview" data-target="p-20">
+      <i class="fas fa-times"></i>
+      <img src="images/fruits/f13.jpg" alt="">
+      <h3>pomogranate</h3>
+      <div class="stars">
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star-half-alt"></i>
+         <span>( 50 )</span>
+      </div>
+      <div class="price">Rs.80/-</div>
+      <div class="buttons">
+ 
+         <a class="cart">add to cart</a>
+      </div>
+   </div>
+
+   <div class="preview" data-target="p-21">
+      <i class="fas fa-times"></i>
+      <img src="images/fruits/f14.jpg" alt="">
+      <h3>mulberry</h3>
+      <div class="stars">
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star-half-alt"></i>
+         <span>( 250 )</span>
+      </div>
+      <div class="price">Rs.80/-</div>
+      <div class="buttons">
+     
+         <aclass="cart">add to cart</a>
+      </div>
+   </div>
+
+   <div class="preview" data-target="p-22">
+      <i class="fas fa-times"></i>
+      <img src="images/fruits/f15.jpg" alt="">
+      <h3>custard apple</h3>
+      <div class="stars">
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star-half-alt"></i>
+         <span>( 250 )</span>
+      </div>
+      <div class="price">Rs.80/-</div>
+      <div class="buttons">
+         
+         <a class="cart">add to cart</a>
+      </div>
+   </div>
+    <div class="preview" data-target="p-23">
+      <i class="fas fa-times"></i>
+      <img src="images/fruits/f2.jpg" alt="">
+      <h3>musk melon</h3>
+      <div class="stars">
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star-half-alt"></i>
+         <span>( 250 )</span>
+      </div>
+      <div class="price">Rs.80/-</div>
+      <div class="buttons">
+     
+         <a class="cart">add to cart</a>
+      </div>
+   </div> 
+   <div class="preview" data-target="p-24">
+      <i class="fas fa-times"></i>
+      <img src="images/fruits/f3.png" alt="">
+      <h3>banana</h3>
+      <div class="stars">
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star-half-alt"></i>
+         <span>( 250 )</span>
+      </div>
+      <div class="price">Rs.80/-</div>
+      <div class="buttons">
+ 
+         <a class="cart">add to cart</a>
+      </div>
+   </div> 
+   <div class="preview" data-target="p-25">
+      <i class="fas fa-times"></i>
+      <img src="images/fruits/f4.jpg" alt="">
+      <h3>orange</h3>
+      <div class="stars">
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star-half-alt"></i>
+         <span>( 250 )</span>
+      </div>
+      <div class="price">Rs.80/-</div>
+      <div class="buttons">
+        
+         <a class="cart">add to cart</a>
+      </div>
+   </div> 
+   <div class="preview" data-target="p-26">
+      <i class="fas fa-times"></i>
+      <img src="images/fruits/f5.jpg" alt="">
+      <h3>apple</h3>
+      <div class="stars">
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star-half-alt"></i>
+         <span>( 250 )</span>
+      </div>
+      <div class="price">Rs.80/-</div>
+      <div class="buttons">
+        
+         <a class="cart">add to cart</a>
+      </div>
+   </div>
+   <div class="preview" data-target="p-27">
+      <i class="fas fa-times"></i>
+      <img src="images/fruits/f6.jpg" alt="">
+      <h3>dragon fruit</h3>
+      <div class="stars">
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star-half-alt"></i>
+         <span>( 250 )</span>
+      </div>
+      <div class="price">Rs.80/-</div>
+      <div class="buttons">
+        
+         <a  class="cart">add to cart</a>
+      </div>
+    </div>
+       <div class="preview" data-target="p-28">
+      <i class="fas fa-times"></i>
+      <img src="images/fruits/f7.png" alt="">
+      <h3>black grapes</h3>
+      <div class="stars">
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star-half-alt"></i>
+         <span>( 250 )</span>
+      </div>
+      <div class="price">Rs.80/-</div>
+      <div class="buttons">
+     
+         <a class="cart">add to cart</a>
+      </div>
+      </div> 
+      <div class="preview" data-target="p-29">
+      <i class="fas fa-times"></i>
+      <img src="images/fruits/f8.jpg" alt="">
+      <h3>water melon</h3>
+      <div class="stars">
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star-half-alt"></i>
+         <span>( 250 )</span>
+      </div>
+      <div class="price">Rs.80/-</div>
+      <div class="buttons">
+        
+         <a  class="cart">add to cart</a>
+      </div> 
+    </div>
+      <div class="preview" data-target="p-30">
+      <i class="fas fa-times"></i>
+      <img src="images/fruits/f9.jpg" alt="">
+      <h3>pineapple</h3>
+      <div class="stars">
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star-half-alt"></i>
+         <span>( 250 )</span>
+      </div>
+      <div class="price">Rs.80/-</div>
+      <div class="buttons">
+         
+         <a  class="cart">add to cart</a>
+      </div>
+   </div>
+   <!--eggs-->
+    <div class="preview" data-target="p-31">
+      <i class="fas fa-times"></i>
+      <img src="images/milk/e1.jpg" alt="">
+      <h3>egg1</h3>
+      <div class="stars">
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star-half-alt"></i>
+         <span>( 50 )</span>
+      </div>
+      
+      <div class="price">Rs.50/-</div>
+      <div class="buttons">
+      
+         <a class="cart">add to cart</a>
+      </div>
+   </div>
+
+   <div class="preview" data-target="p-32">
+      <i class="fas fa-times"></i>
+      <img src="images/milk/e2.jpg" alt="">
+      <h3>egg2</h3>
+      <div class="stars">
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star-half-alt"></i>
+         <span>( 100 )</span>
+      </div>
+      <div class="price">Rs.100/-</div>
+      <div class="buttons">
+  
+         <a  class="cart">add to cart</a>
+      </div>
+   </div>
+
+     <div class="preview" data-target="p-33">
+      <i class="fas fa-times"></i>
+      <img src="images/milk/e3.jpg" alt="">
+      <h3>egg3</h3>
+      <div class="stars">
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star-half-alt"></i>
+         <span>( 100 )</span>
+      </div>
+      <div class="price">Rs.100/-</div>
+      <div class="buttons">
+       
+         <a  class="cart">add to cart</a>
+      </div>
+   </div>
+
+   <div class="preview" data-target="p-34">
+      <i class="fas fa-times"></i>
+      <img src="images/milk/e4.jpg" alt="">
+      <h3>egg4</h3>
+      <div class="stars">
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star-half-alt"></i>
+         <span>( 100 )</span>
+      </div>
+      <div class="price">Rs.80/-</div>
+      <div class="buttons">
+
+         <a  class="cart">add to cart</a>
+      </div>
+   </div>
+
+   <div class="preview" data-target="p-35">
+      <i class="fas fa-times"></i>
+      <img src="images/milk/e5.jpg" alt="">
+      <h3>egg5</h3>
+      <div class="stars">
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star-half-alt"></i>
+         <span>( 50 )</span>
+      </div>
+      <div class="price">Rs.80/-</div>
+      <div class="buttons">
+       
+         <aclass="cart">add to cart</a>
+      </div>
+   </div>
+
+   <div class="preview" data-target="p-36">
+      <i class="fas fa-times"></i>
+      <img src="images/milk/e6.jpg" alt="">
+      <h3>egg6</h3>
+      <div class="stars">
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star-half-alt"></i>
+         <span>( 250 )</span>
+      </div>
+      <div class="price">Rs.80/-</div>
+      <div class="buttons">
+         <a  class="cart">add to cart</a>
+      </div>
+   </div>
+    <div class="preview" data-target="p-37">
+      <i class="fas fa-times"></i>
+      <img src="images/milk/m1.jpg" alt="">
+      <h3>milk1</h3>
+      <div class="stars">
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star-half-alt"></i>
+         <span>( 50 )</span>
+      </div>
+      
+      <div class="price">Rs.50/-</div>
+      <div class="buttons">
+     
+         <a  class="cart">add to cart</a>
+      </div>
+   </div>
+
+   <div class="preview" data-target="p-38">
+      <i class="fas fa-times"></i>
+      <img src="images/milk/m2.jpg" alt="">
+      <h3>milk2</h3>
+      <div class="stars">
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star-half-alt"></i>
+         <span>( 100 )</span>
+      </div>
+      <div class="price">Rs.100/-</div>
+      <div class="buttons">
+         
+         <a class="cart">add to cart</a>
+      </div>
+   </div>
+
+     <div class="preview" data-target="p-39">
+      <i class="fas fa-times"></i>
+      <img src="images/milk/m3.jpg" alt="">
+      <h3>milk3</h3>
+      <div class="stars">
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star-half-alt"></i>
+         <span>( 100 )</span>
+      </div>
+      <div class="price">Rs.100/-</div>
+      <div class="buttons">
+       
+         <a class="cart">add to cart</a>
+      </div>
+   </div>
+
+   <div class="preview" data-target="p-40">
+      <i class="fas fa-times"></i>
+      <img src="images/milk/m4.jpg" alt="">
+      <h3>milk4</h3>
+      <div class="stars">
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star-half-alt"></i>
+         <span>( 100 )</span>
+      </div>
+      <div class="price">Rs.80/-</div>
+      <div class="buttons">
+       
+         <a class="cart">add to cart</a>
+      </div>
+   </div>
+
+   <div class="preview" data-target="p-41">
+      <i class="fas fa-times"></i>
+      <img src="images/milk/m5.jpg" alt="">
+      <h3>milk5</h3>
+      <div class="stars">
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star-half-alt"></i>
+         <span>( 50 )</span>
+      </div>
+      <div class="price">Rs.80/-</div>
+      <div class="buttons">
+       
+         <a  class="cart">add to cart</a>
+      </div>
+   </div>
+
+   <div class="preview" data-target="p-42">
+      <i class="fas fa-times"></i>
+      <img src="images/milk/m6.jpg" alt="">
+      <h3>milk6</h3>
+      <div class="stars">
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star-half-alt"></i>
+         <span>( 250 )</span>
+      </div>
+      <div class="price">Rs.80/-</div>
+      <div class="buttons">
+         
+         <a  class="cart">add to cart</a>
+      </div>
+   </div>
+   <!--meat-->
+   <div class="preview" data-target="p-43">
+      <i class="fas fa-times"></i>
+      <img src="images/meat/m1.jpg" alt="">
+      <h3>chick1</h3>
+      <div class="stars">
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star-half-alt"></i>
+         <span>( 50 )</span>
+      </div>
+      
+      <div class="price">Rs.50/-</div>
+      <div class="buttons">
+         
+         <a  class="cart">add to cart</a>
+      </div>
+   </div>
+
+   <div class="preview" data-target="p-44">
+      <i class="fas fa-times"></i>
+      <img src="images/meat/m2.jpg" alt="">
+      <h3>chick2</h3>
+      <div class="stars">
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star-half-alt"></i>
+         <span>( 100 )</span>
+      </div>
+      <div class="price">Rs.100/-</div>
+      <div class="buttons">
+      
+         <a class="cart">add to cart</a>
+      </div>
+   </div>
+
+     <div class="preview" data-target="p-45">
+      <i class="fas fa-times"></i>
+      <img src="images/meat/m3.jpg" alt="">
+      <h3>chick3</h3>
+      <div class="stars">
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star-half-alt"></i>
+         <span>( 100 )</span>
+      </div>
+      <div class="price">Rs.100/-</div>
+      <div class="buttons">
+         <a  class="cart">add to cart</a>
+      </div>
+   </div>
+
+   <div class="preview" data-target="p-46">
+      <i class="fas fa-times"></i>
+      <img src="images/meat/m4.jpg" alt="">
+      <h3>chick4</h3>
+      <div class="stars">
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star-half-alt"></i>
+         <span>( 100 )</span>
+      </div>
+      <div class="price">Rs.80/-</div>
+      <div class="buttons">
+        
+         <a  class="cart">add to cart</a>
+      </div>
+   </div>
+
+   <div class="preview" data-target="p-47">
+      <i class="fas fa-times"></i>
+      <img src="images/meat/m5.jpg" alt="">
+      <h3>chick5</h3>
+      <div class="stars">
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star-half-alt"></i>
+         <span>( 50 )</span>
+      </div>
+      <div class="price">Rs.80/-</div>
+      <div class="buttons">
+    
+         <a class="cart">add to cart</a>
+      </div>
+   </div>
+
+   <div class="preview" data-target="p-48">
+      <i class="fas fa-times"></i>
+      <img src="images/meat/m6.jpg" alt="">
+      <h3>chick6</h3>
+      <div class="stars">
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star-half-alt"></i>
+         <span>( 250 )</span>
+      </div>
+      <div class="price">Rs.80/-</div>
+      <div class="buttons">
+         
+         <a  class="cart">add to cart</a>
+      </div>
+   </div>
+
+   <div class="preview" data-target="p-49">
+      <i class="fas fa-times"></i>
+      <img src="images/meat/m7.jpg" alt="">
+      <h3>chick7</h3>
+      <div class="stars">
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star-half-alt"></i>
+         <span>( 250 )</span>
+      </div>
+      <div class="price">Rs.80/-</div>
+      <div class="buttons">
+      
+         <a  class="cart">add to cart</a>
+      </div>
+   </div>
+    <div class="preview" data-target="p-50">
+      <i class="fas fa-times"></i>
+      <img src="images/meat/m8.jpg" alt="">
+      <h3>chick8</h3>
+      <div class="stars">
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star-half-alt"></i>
+         <span>( 250 )</span>
+      </div>
+      <div class="price">Rs.80/-</div>
+      <div class="buttons">
+         
+         <a class="cart">add to cart</a>
+      </div>
+   </div> 
+     
+</div>
+ <script type="text/javascript">
+
+  var noti = document.querySelector('h6');
+  var button = document.getElementsByTagName('a');
+
+  for(var but of button){
+    but.addEventListener('click', (e)=>{
+      var add = Number(noti.getAttribute('data-count') || 0);
+      noti.setAttribute('data-count', add +1);
+      noti.classList.add('zero');
+
+     
+  })
+
+  }
+
+
+    </script>
+</section>
+
+    <!-- Footer section -->
+  <section class="footer_wrapper mt-3 mt-md-0">
+        <div class="container px-5 px-lg-0">
+            <div class="row">
+                <div class="col-lg-3 col-sm-6 mb-5 mb-lg-0">
+            
+                          <a href="#" class="logo"> <i class="fas fa-shopping-basket"></i>Fresh<span style="color: yellow; font-family: cursive;">mart</span></a>
+                    <p class="mb-4 ps-0 company_details">highest quality food products. Made in our farm. vegetables and fruits are made in farm.</p>
+                    <div class="contact-info">
+                        <ul class="list-unstyled">
+                            <li><a href="#"><i class="fa fa-home me-3"></i> No. 96, london City, London</a></li>
+                            <li><a href="#"><i class="fa fa-phone me-3"></i> 222 3333</a></li>
+                            <li><a href="#"><i class="fa fa-envelope me-3"></i>info@example.com</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 mb-5 mb-lg-0">
+                    <h5>Customer Support</h5>
+                    <ul class="link-widget p-0">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Product Returns</a></li>
+                        <li><a href="#">Wholesale Policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-sm-6 mb-5 mb-lg-0">
+                    <h5>Quick Links</h5>
+                    <ul class="link-widget p-0">
+                        <li><a href="#">Product</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Accessories</a></li>
+                        <li><a href="#">Term Of Use</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-sm-6 mb-5 mb-lg-0">
+                    <h5>Newsletter</h5>
+                    <div class="form-group mb-4">
+                        <input type="email" class="form-control bg-transparent" placeholder="Enter Your Email Here">
+                        <button type="submit" class="btn main-btn">Subscribe</button>
+                    </div>
+                    <h5>Stay Connected</h5>
+                    <ul class="social-network d-flex align-items-center p-0">
+                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                        <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid copyright-section">
+            <p> <a href="#">©FreshMart.com</a></p>
+        </div>
+    </section>
+    <!-- Footer Section Exit  -->
+
+    <!-- Bootstrap 5 CDN -->
+   
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"> </script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"> </script>
+<script type="text/javascript">
+    
+let preveiwContainer = document.querySelector('.products-preview');
+let previewBox = preveiwContainer.querySelectorAll('.preview');
+
+document.querySelectorAll('.products-container .product').forEach(product =>{
+  product.onclick = () =>{
+    preveiwContainer.style.display = 'flex';
+    let name = product.getAttribute('data-name');
+    previewBox.forEach(preview =>{
+      let target = preview.getAttribute('data-target');
+      if(name == target){
+        preview.classList.add('active');
+      }
+    });
+  };
+});
+
+previewBox.forEach(close =>{
+  close.querySelector('.fa-times').onclick = () =>{
+    close.classList.remove('active');
+    preveiwContainer.style.display = 'none';
+  };
+});
+
+</script>
+        
+</body>
+
+</html>
